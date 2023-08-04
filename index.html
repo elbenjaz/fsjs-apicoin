@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicadores Económicos</title>
+
+    <link rel="shortcut icon" href="assets/img/logo.png">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="form rainbow">
+        <h3>
+            <img class="logo me-2" src="assets/img/logo.png">
+            <b>Indicadores Económicos</b>
+        </h3>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-floating my-3">
+                    <select id="coin-type" class="form-select" autocomplete="off">
+                        <option data-key="USD" value="dolar" selected>USD - Dólar estadounidense</option>
+                        <option data-key="EUR" value="euro">EUR - Euro</option>
+                        <option data-key="UF" value="uf">UF - Unidad de fomento</option>
+                        <option data-key="UTM" value="utm">UTM - Unidad tributaria mensual</option>
+                    </select>
+                    <label for="coin-type">Tipo</label>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="form-floating mb-3">
+                    <input id="coin-from" data-key="CLP" class="form-control" type="text" autocomplete="off">
+                    <label for="coin-from">CLP - Peso chileno</label>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="form-floating mb-3">
+                    <input id="coin-to" class="form-control" type="text" autocomplete="off">
+                    <label id="coin-to-label" for="coin-to"></label>
+                </div>
+            </div>
+        </div>
+
+        <button id="submit" type="button" class="btn btn-warning">
+            <i class="fa-solid fa-coins"></i> Convertir
+        </button>
+
+        <hr>
+
+        <div id="feedback"></div>
+
+        <div id="loading" class="text-center" style="display: none">
+            <img src="assets/img/loading.gif">
+            <p>Por favor espera...</p>
+        </div>
+
+        <div id="content" class="text-center">
+            <span id="chart-coin-to-from" class="badge rounded-pill text-bg-primary fs-6 mb-2 mx-2"></span>
+            <span id="chart-coin-from-to" class="badge rounded-pill text-bg-primary fs-6 mb-2 mx-2"></span>
+
+            <canvas id="chart"></canvas>
+        </div>
+    </div>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/07ed0338da.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script type="module" src="assets/js/script.js"></script>
+</body>
+</html>
